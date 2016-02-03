@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+## gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -68,6 +68,6 @@ end
 
 	# recaptcha is optional and configured by config.use_recaptcha in milia initializer
 	# default is true; if you change it to false, comment out the line below
-	
+
 gem 'recaptcha', :require => "recaptcha/rails"
 gem "activerecord-session_store", github: "rails/activerecord-session_store"
