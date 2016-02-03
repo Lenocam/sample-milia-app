@@ -220,6 +220,7 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.2.4)
   rails_12factor
+  rails_serve_static_assets
   recaptcha
   sass-rails (~> 4.0.0)
   sdoc

@@ -13,10 +13,6 @@ module SampleMiliaApp
 			#  Heroku requires this to be false.
 			config.assets.initialize_on_precompile = false
 
-			#added because sprockets_better_errors suggested I do to make it work on Heroku
-			config.assets.precompile += %w( error_styles.scss home.css.scss members.css.scss web_app_theme.css )
-
-
 		# uncomment to ensure a common layout for devise forms
 		config.to_prepare do   # Devise
 		Devise::SessionsController.layout "sign"
