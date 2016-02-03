@@ -7,34 +7,37 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module SampleMiliaApp
-  class Application < Rails::Application
-          #  For faster asset precompiles, you can partially load your application. 
-      #  In that case, templates cannot see application objects or methods. 
-      #  Heroku requires this to be false.
-      config.assets.initialize_on_precompile = false
+	class Application < Rails::Application
+					#  For faster asset precompiles, you can partially load your application.
+			#  In that case, templates cannot see application objects or methods.
+			#  Heroku requires this to be false.
+			config.assets.initialize_on_precompile = false
 
-     
-    # uncomment to ensure a common layout for devise forms
-    config.to_prepare do   # Devise
-    Devise::SessionsController.layout "sign"
-    Devise::RegistrationsController.layout "sign"
-    Devise::ConfirmationsController.layout "sign"
-    Devise::PasswordsController.layout "sign"
-    end   # Devise
+			#added because sprockets_better_errors suggested I do to make it work on Heroku
+			config.assets.precompile += %w( error_styles.scss home.css.scss members.css.scss web_app_theme.css )
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
 
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    config.time_zone = 'Pacific Time (US & Canada)'
+		# uncomment to ensure a common layout for devise forms
+		config.to_prepare do   # Devise
+		Devise::SessionsController.layout "sign"
+		Devise::RegistrationsController.layout "sign"
+		Devise::ConfirmationsController.layout "sign"
+		Devise::PasswordsController.layout "sign"
+		end   # Devise
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+		# Settings in config/environments/* take precedence over those specified here.
+		# Application configuration should go into files in config/initializers
+		# -- all .rb files in that directory are automatically loaded.
 
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
-  end
+		# Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+		# Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+		config.time_zone = 'Pacific Time (US & Canada)'
+
+		# The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+		# config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+		# config.i18n.default_locale = :de
+
+		# Do not swallow errors in after_commit/after_rollback callbacks.
+		config.active_record.raise_in_transactional_callbacks = true
+	end
 end
