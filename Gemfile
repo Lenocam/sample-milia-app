@@ -57,7 +57,6 @@ end
 	gem "SystemTimer", :require => "system_timer", :platforms => :ruby_18
 	gem "rack-timeout"
 	gem 'rails_12factor'
-	gem 'rails_serve_static_assets'
 
 	gem 'web-app-theme', :git => 'git://github.com/dsaronin/web-app-theme.git'
 	gem 'devise', '~>3.2'
