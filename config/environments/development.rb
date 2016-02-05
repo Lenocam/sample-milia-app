@@ -13,7 +13,7 @@ Rails.application.configure do
 		:address => "smtp.gmail.com",
 		:port => "587",
 		:authentication => :plain,
-		:user_name => "my-email@my-domain.com",
+		:user_name => "Learn22Ruby@gmail.com",
 		:password => ENV["SMTP_ENTRY"],
 		:enable_starttls_auto => true
 	}
@@ -61,5 +61,5 @@ Rails.application.configure do
 	# To enable sprockets_better_errors
 # add this line to your `config/environments/development.rb:
 	 config.assets.raise_production_errors = true
-
+	 $stdout.sync = true
 end
