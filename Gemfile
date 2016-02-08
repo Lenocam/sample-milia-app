@@ -36,7 +36,6 @@ end
 	gem "rack-timeout"
 	gem 'rails_12factor'
 	gem "figaro"
-	gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 
 	gem 'web-app-theme', :git => 'git://github.com/dsaronin/web-app-theme.git'

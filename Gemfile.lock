@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/alexpeattie/heroku_secrets.git
-  revision: 717af8e0acf399bc88d2c8c1a7e230023942af0f
-  specs:
-    heroku_secrets (0.0.2)
-
-GIT
   remote: git://github.com/dsaronin/milia.git
   revision: 1eb36790da8274b78b4bf7009077e81c6c332abd
   branch: v1.0.1
@@ -246,7 +240,6 @@ DEPENDENCIES
   devise (~> 3.2)
   figaro
   haml-rails
-  heroku_secrets!
   html2haml!
   jbuilder (~> 1.2)
   jquery-rails
